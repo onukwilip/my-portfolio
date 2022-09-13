@@ -1,0 +1,25 @@
+.tcard {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+  width: 250px;
+  word-wrap: break-word;
+  align-items: center;
+  justify-content: center;
+  border: 10px double purple;
+  border-radius: 20px;
+  -webkit-backdrop-filter: 10px;
+          backdrop-filter: 10px;
+}
+.tcard img {
+  transform: scale(0.5);
+  width: 150px;
+  border-radius: 50%;
+}
+.tcard h6,
+.tcard span {
+  text-align: center;
+}
+.tcard span {
+  font-size: 15px;
+}/*# sourceMappingURL=tcard.css.map */

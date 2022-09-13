@@ -1,0 +1,25 @@
+@import "../../variables.scss";
+.tcard {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+  width: 250px;
+  word-wrap: break-word;
+  align-items: center;
+  justify-content: center;
+  border: 10px double purple;
+  border-radius: 20px;
+  backdrop-filter: 10px;
+  img {
+    transform: scale(0.5);
+    width: 150px;
+    border-radius: 50%;
+  }
+  h6,
+  span {
+    text-align: center;
+  }
+  span {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,15 @@
+.card {
+  display: flex;
+  flex-direction: row;
+  box-shadow: 2px 3px 20px rgba(0, 0, 225, 0.5);
+  align-items: center;
+  padding: 10px 30px;
+  top: 0px;
+}
+.card img {
+  width: 70px;
+  height: 70px;
+}
+.card span {
+  font-size: 15px;
+}/*# sourceMappingURL=card.css.map */

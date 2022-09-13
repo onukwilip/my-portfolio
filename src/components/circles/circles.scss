@@ -1,0 +1,27 @@
+@import "../../variables.scss";
+
+.circle {
+  .round {
+    @include flex(center);
+    justify-content: center;
+    position: relative;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 10px solid purple;
+    padding: 40px;
+    span {
+      font-size: 25px;
+    }
+  }
+  > * {
+    text-align: center;
+  }
+  p {
+    line-height: 7px;
+    font-size: 18px;
+    &:nth-of-type(2) {
+      color: purple;
+    }
+  }
+}

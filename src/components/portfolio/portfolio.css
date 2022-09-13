@@ -1,0 +1,42 @@
+.p-contain {
+  margin-top: 150px;
+}
+
+.p-main {
+  padding: 30px 80px;
+}
+.p-main .head {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-direction: column;
+}
+.p-main .highlight {
+  color: purple;
+  font-weight: bold;
+}
+
+.projects img {
+  height: 200px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+}
+.projects .links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+.projects .links button {
+  box-shadow: none;
+}
+
+@media only screen and (max-width: 420px) {
+  .p-main .head h2 {
+    text-align: center;
+  }
+  .slider {
+    width: 100% !important;
+  }
+}/*# sourceMappingURL=portfolio.css.map */

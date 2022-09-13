@@ -1,0 +1,109 @@
+@import "../../_variables.scss";
+header {
+  color: #fff;
+  padding: 30px 60px;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+      color: purple;
+    }
+  }
+  span.icon {
+    quotes: 40px;
+    border-radius: 50%;
+    padding: 10px;
+    border: 2px solid white;
+    display: none;
+    cursor: pointer;
+  }
+}
+
+.h-row {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.h-l-side {
+  flex: 1;
+  //background-color: yellow;
+}
+.h-r-side {
+  flex: 1;
+  //background-color: beige;
+}
+.flex {
+  @include flex(center);
+}
+
+.h-flex {
+  @include flex(center);
+}
+
+.menu {
+  @include flex(center);
+  list-style-type: none;
+  gap: 2rem;
+  justify-content: right;
+  > li {
+    cursor: pointer;
+  }
+  //background-color: green;
+}
+
+.show {
+  position: fixed;
+  left: 0 !important;
+  top: 0 !important;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  list-style-type: none;
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+  transform: scale(1);
+  padding: 30px 50px;
+  > li {
+    line-height: 100px;
+    cursor: pointer;
+  }
+  > button {
+    margin-top: 30px;
+  }
+  //background-color: green;
+}
+
+@media only screen and (max-width: 1032px) {
+  header {
+    .h-row {
+      align-items: baseline;
+    }
+    .h-r-side {
+      transform: scale(0.9);
+    }
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .h-row {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  header {
+    span.icon {
+      display: block;
+    }
+  }
+
+  .h-row {
+    flex-direction: row;
+  }
+  .menu {
+    display: none;
+  }
+}

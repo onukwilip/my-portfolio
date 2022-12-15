@@ -8,7 +8,7 @@ import dotNet from "../../img/DotNET.png";
 import _react from "../../img/react.png";
 
 import TCard from "../tCards/TCard";
-import CV from "./CV6.pdf";
+import CV from "./Minimal Professional Resume.pdf";
 
 const Services = () => {
   return (

@@ -13,6 +13,13 @@ $pry-text: rgba(0, 0, 225, 0.7);
   gap: 1rem;
   align-items: $position;
 }
+@mixin flex2($al, $jc, $gap, $fd) {
+  display: flex;
+  gap: $gap;
+  align-items: $al;
+  justify-content: $jc;
+  flex-direction: $fd;
+}
 
 $padding: 30px 60px;
 $padding2: 30px 80px;

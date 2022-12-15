@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
+import me from "../../img/me.png";
+import github from "../../img/icons8-github-512.png";
+import insta from "../../img/icons8-instagram-512.png";
+import linkedin from "../../img/icons8-linkedin-512.png";
 import "./header.css";
 
 const Header = () => {
@@ -182,12 +186,39 @@ const Header = () => {
         </div>
         <div className="">
           <ul className={!miniNav ? "menu h-r-side" : "show"}>
+            <div className="profile">
+              <div className="img-container">
+                <img src={me} alt="" />
+              </div>
+              <a
+                href="https://github.com/onukwilip"
+                target="_blank"
+                className="social"
+              >
+                <img src={github} alt="" />
+              </a>
+              <a
+                href="https://www.instagram.com/onukwilip2006/"
+                target="_blank"
+                className="social"
+              >
+                <img src={insta} alt="" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/prince-onukwili-a82143233"
+                target="_blank"
+                className="social"
+              >
+                <img src={linkedin} alt="" />
+              </a>
+            </div>
+            <hr style={{ width: "100%" }} />
             <li
               onClick={() => {
                 setMiniNav(false);
               }}
             >
-              <a href="#Home">Home</a>
+              <a href="/#Home">Home</a>
             </li>
 
             <li

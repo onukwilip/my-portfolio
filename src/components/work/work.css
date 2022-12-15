@@ -94,7 +94,7 @@
   }
 }
 
-@media only screen and (max-width: 1032px) {
+@media only screen and (max-width: 1200px) {
   .w-main .w-l-side {
     height: 400px;
   }

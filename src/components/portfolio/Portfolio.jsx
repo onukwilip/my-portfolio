@@ -3,36 +3,58 @@ import "./portfolio.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import musicapp from "../../img/musicapp.png";
-import hoc from "../../img/hoc.png";
-import ecommerce from "../../img/ecommerce.png";
-import sidebar from "../../img/sidebar.png";
+import gochat from "../../img/gochat-tau.vercel.app_ (1).png";
+import expense from "../../img/goit-expenses.netlify.app_.png";
+import meetup from "../../img/goit-meetup.netlify.app_.png";
+import momasPay from "../../img/goit-momas-pay.netlify.app_.png";
+import streamIt from "../../img/goit-streamit.netlify.app_.png";
+import hopeAtLast from "../../img/hope-at-last.netlify.app_.png";
+import goit from "../../img/onukwilip.github.io_GO-IT_.png";
 
 const Portfolio = () => {
   const portfolioArray = [
     {
       id: 1,
-      image: musicapp,
-      githubLink: "",
-      demoLink: "",
+      image: gochat,
+      githubLink: "https://github.com/onukwilip/GOChat-2.0",
+      demoLink: "https://gochat-tau.vercel.app",
     },
     {
       id: 2,
-      image: hoc,
-      githubLink: "",
-      demoLink: "",
+      image: hopeAtLast,
+      githubLink: "#",
+      demoLink: "https://hope-at-last.netlify.app/",
     },
     {
       id: 3,
-      image: ecommerce,
-      githubLink: "",
-      demoLink: "",
+      image: momasPay,
+      githubLink: "https://github.com/onukwilip/momas-pay-backup",
+      demoLink: "https://goit-momas-pay.netlify.app/",
     },
     {
       id: 4,
-      image: sidebar,
-      githubLink: "",
-      demoLink: "",
+      image: expense,
+      githubLink:
+        "https://github.com/onukwilip/react-complete-guide-expenses-project",
+      demoLink: "https://goit-expenses.netlify.app/",
+    },
+    {
+      id: 5,
+      image: meetup,
+      githubLink: "https://github.com/onukwilip/react-meetup",
+      demoLink: "https://goit-meetup.netlify.app/",
+    },
+    {
+      id: 6,
+      image: streamIt,
+      githubLink: "https://github.com/onukwilip/movie-web-app",
+      demoLink: "https://goit-streamit.netlify.app/",
+    },
+    {
+      id: 7,
+      image: goit,
+      githubLink: "https://github.com/onukwilip/GO-IT",
+      demoLink: "https://onukwilip.github.io/GO-IT/",
     },
   ];
 

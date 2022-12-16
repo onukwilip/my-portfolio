@@ -31,10 +31,10 @@
     line-height: normal;
   }
   .name {
-    color: purple;
+    color: rgba(yellow, 0.8);
     font-weight: bolder;
     font-size: 90px;
-    filter: drop-shadow(0px 0px 30px white);
+    // filter: drop-shadow(0px 0px 30px white);
   }
 }
 .desc {
@@ -189,12 +189,12 @@
   align-items: baseline;
   gap: 3rem;
   .dynamic {
-    color: purple;
+    color: rgba(yellow, 0.8);
     font-weight: bolder;
     font-size: 60px;
     margin-left: -2rem;
     position: relative;
-    filter: drop-shadow(0px 0px 30px white);
+    // filter: drop-shadow(0px 0px 30px white);
     &::after {
       content: "";
       position: absolute;

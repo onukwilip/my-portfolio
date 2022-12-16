@@ -11,8 +11,18 @@
   overflow-x: hidden;
   word-wrap: break-word;
   color: $pry-text;
+  position: relative;
 }
-
+.blob {
+  position: absolute;
+  left: -500px;
+  top: -400px;
+  z-index: -1;
+  img {
+    width: 1500px;
+    height: 1500px;
+  }
+}
 button {
   padding: 10px 25px;
   font-size: 14px;

@@ -33,10 +33,9 @@
   line-height: normal;
 }
 .intro .name {
-  color: purple;
+  color: rgba(255, 255, 0, 0.8);
   font-weight: bolder;
   font-size: 90px;
-  filter: drop-shadow(0px 0px 30px white);
 }
 
 .desc {
@@ -227,12 +226,11 @@
   gap: 3rem;
 }
 .animate-text .dynamic {
-  color: purple;
+  color: rgba(255, 255, 0, 0.8);
   font-weight: bolder;
   font-size: 60px;
   margin-left: -2rem;
   position: relative;
-  filter: drop-shadow(0px 0px 30px white);
 }
 .animate-text .dynamic::after {
   content: "";

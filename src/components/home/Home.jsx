@@ -234,7 +234,7 @@ const Home = () => {
     <>
       <section className="row home-main" id="Home">
         <div className="col-xl-6 l-side">
-          <div className="background"></div>
+          {/* <div className="background"></div> */}
           <div className="flex intro">
             <h1>Hy! I'm</h1>
             <h1 className="name">Prince</h1>

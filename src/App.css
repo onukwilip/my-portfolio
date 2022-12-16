@@ -5,6 +5,18 @@
   overflow-x: hidden;
   word-wrap: break-word;
   color: rgba(0, 0, 225, 0.7);
+  position: relative;
+}
+
+.blob {
+  position: absolute;
+  left: -500px;
+  top: -400px;
+  z-index: -1;
+}
+.blob img {
+  width: 1500px;
+  height: 1500px;
 }
 
 button {

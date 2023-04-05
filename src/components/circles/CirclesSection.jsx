@@ -6,13 +6,13 @@ const CirclesSection = () => {
   return (
     <section className="c-main" id="Circles">
       <div>
-        <Circles num={"8+"} head={"Years"} highlight={"Experience"} />
+        <Circles num={"30+"} head={"GitHub"} highlight={"Repositories"} />
       </div>
       <div>
-        <Circles num={"20+"} head={"Completed"} highlight={"Projects"} />
+        <Circles num={"500+"} head={"LinkedIn"} highlight={"Connections"} />
       </div>
       <div>
-        <Circles num={"5+"} head={"Companies"} highlight={"Work"} />
+        <Circles num={"5+"} head={"Industry level"} highlight={"Projects"} />
       </div>
     </section>
   );

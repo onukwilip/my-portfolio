@@ -9,17 +9,7 @@
 }
 
 .c-animate {
-  -webkit-animation: c-main 1.5s forwards;
-          animation: c-main 1.5s forwards;
-}
-
-@-webkit-keyframes c-main {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
+  animation: c-main 1.5s forwards;
 }
 
 @keyframes c-main {

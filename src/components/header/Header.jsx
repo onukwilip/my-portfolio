@@ -8,6 +8,11 @@ import "./header.css";
 
 const Header = () => {
   const [miniNav, setMiniNav] = useState(false);
+
+  const onLinkClick = () => {
+    setMiniNav(false);
+  };
+
   const cardScrollAnimate = () => {
     let card1 = document.querySelectorAll(".s-card-1");
     let card2 = document.querySelectorAll(".s-card-2");
@@ -178,6 +183,7 @@ const Header = () => {
     window.addEventListener("scroll", circleRotate);
     circleRotate();
   });
+
   return (
     <header>
       <div className="h-row">
@@ -213,51 +219,25 @@ const Header = () => {
               </a>
             </div>
             <hr style={{ width: "100%" }} />
-            <li
-              onClick={() => {
-                setMiniNav(false);
-              }}
-            >
-              <a href="/#Home">Home</a>
+            <li onClick={onLinkClick}>
+              <a href="#Home">Home</a>
             </li>
 
-            <li
-              onClick={() => {
-                setMiniNav(false);
-              }}
-            >
-              <a href="#Services">Services</a>
+            <li onClick={onLinkClick}>
+              <a href="#About">About</a>
             </li>
 
-            <li
-              onClick={() => {
-                setMiniNav(false);
-              }}
-            >
+            <li onClick={onLinkClick}>
               <a href="#Work">Experience</a>
             </li>
-            <li
-              onClick={() => {
-                setMiniNav(false);
-              }}
-            >
+            <li onClick={onLinkClick}>
               <a href="#Portfolio">Portfolio</a>
             </li>
-            <li
-              onClick={() => {
-                setMiniNav(false);
-              }}
-            >
+            <li onClick={onLinkClick}>
               <a href="#Testimonial">Testimonial</a>
             </li>
             <a href="tel:+2349071589571">
-              <button
-                onClick={() => {
-                  setMiniNav(false);
-                }}
-              >
-                Contact
-              </button>
+              <button onClick={onLinkClick}>Contact</button>
             </a>
           </ul>
         </div>

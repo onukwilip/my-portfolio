@@ -83,6 +83,7 @@
     top: -60px;
     right: 0;
     opacity: 0;
+    backdrop-filter: blur(10px);
   }
 
   .s-card-2 {
@@ -90,6 +91,7 @@
     bottom: 0;
     left: 0;
     opacity: 0;
+    backdrop-filter: blur(10px);
   }
 
   .s-card-3 {
@@ -97,6 +99,7 @@
     top: 20.5rem;
     right: 4.5rem;
     opacity: 0;
+    backdrop-filter: blur(10px);
   }
 }
 
@@ -132,7 +135,7 @@
 
 @media only screen and (max-width: 1200px) {
   .services {
-    height: 1000px;
+    height: auto;
     .s-r-side {
       display: flex;
       gap: 2rem;
@@ -189,12 +192,14 @@
 }
 @media only screen and (max-width: 770px) {
   .services {
-    height: 1150px;
+    // height: 1150px;
+    height: auto;
   }
 }
 @media only screen and (max-width: 420px) {
   .services {
-    height: 2070px;
+    // height: 2070px;
+    height: auto;
     .s-l-side {
       text-align: center;
       .s-intro {

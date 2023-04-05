@@ -6,10 +6,9 @@
   font-family: "Gumela";
   font-weight: normal;
   font-size: 20px;
-}
-html {
   scroll-behavior: smooth;
 }
+
 body {
   margin: 0;
   padding: 0;

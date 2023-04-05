@@ -66,44 +66,37 @@
   padding: 30px 80px;
 }
 .services .s-card-1-animate {
-  -webkit-animation: s-card-1 1.5s forwards;
-          animation: s-card-1 1.5s forwards;
+  animation: s-card-1 1.5s forwards;
 }
 .services .s-card-2-animate {
-  -webkit-animation: s-card-2 1.5s forwards;
-          animation: s-card-2 1.5s forwards;
+  animation: s-card-2 1.5s forwards;
 }
 .services .s-card-3-animate {
-  -webkit-animation: s-card-3 1.5s forwards;
-          animation: s-card-3 1.5s forwards;
+  animation: s-card-3 1.5s forwards;
 }
 .services .s-card-1 {
   position: absolute;
   top: -60px;
   right: 0;
   opacity: 0;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 .services .s-card-2 {
   position: absolute;
   bottom: 0;
   left: 0;
   opacity: 0;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 .services .s-card-3 {
   position: absolute;
   top: 20.5rem;
   right: 4.5rem;
   opacity: 0;
-}
-
-@-webkit-keyframes s-card-1 {
-  from {
-    right: -4rem;
-  }
-  to {
-    right: 0;
-    opacity: 1;
-  }
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 
 @keyframes s-card-1 {
@@ -115,30 +108,12 @@
     opacity: 1;
   }
 }
-@-webkit-keyframes s-card-2 {
-  from {
-    left: -4rem;
-  }
-  to {
-    left: 0;
-    opacity: 1;
-  }
-}
 @keyframes s-card-2 {
   from {
     left: -4rem;
   }
   to {
     left: 0;
-    opacity: 1;
-  }
-}
-@-webkit-keyframes s-card-3 {
-  from {
-    right: 7rem;
-  }
-  to {
-    right: 4.5rem;
     opacity: 1;
   }
 }
@@ -153,7 +128,7 @@
 }
 @media only screen and (max-width: 1200px) {
   .services {
-    height: 1000px;
+    height: auto;
   }
   .services .s-r-side {
     display: flex;
@@ -170,15 +145,6 @@
     right: 0;
     bottom: 0;
   }
-  @-webkit-keyframes s-card-1 {
-    from {
-      top: -4rem;
-    }
-    to {
-      top: 0;
-      opacity: 1;
-    }
-  }
   @keyframes s-card-1 {
     from {
       top: -4rem;
@@ -188,30 +154,12 @@
       opacity: 1;
     }
   }
-  @-webkit-keyframes s-card-2 {
-    from {
-      top: 8rem;
-    }
-    to {
-      top: 0rem;
-      opacity: 1;
-    }
-  }
   @keyframes s-card-2 {
     from {
       top: 8rem;
     }
     to {
       top: 0rem;
-      opacity: 1;
-    }
-  }
-  @-webkit-keyframes s-card-3 {
-    from {
-      top: -7rem;
-    }
-    to {
-      top: 0;
       opacity: 1;
     }
   }
@@ -235,12 +183,12 @@
 }
 @media only screen and (max-width: 770px) {
   .services {
-    height: 1150px;
+    height: auto;
   }
 }
 @media only screen and (max-width: 420px) {
   .services {
-    height: 2070px;
+    height: auto;
   }
   .services .s-l-side {
     text-align: center;
@@ -261,27 +209,9 @@
     margin: 0;
     margin-top: -4rem;
   }
-  @-webkit-keyframes s-card-1 {
-    from {
-      left: 4rem;
-    }
-    to {
-      left: 0;
-      opacity: 1;
-    }
-  }
   @keyframes s-card-1 {
     from {
       left: 4rem;
-    }
-    to {
-      left: 0;
-      opacity: 1;
-    }
-  }
-  @-webkit-keyframes s-card-2 {
-    from {
-      left: -4rem;
     }
     to {
       left: 0;
@@ -297,15 +227,6 @@
       opacity: 1;
     }
   }
-  @-webkit-keyframes s-card-3 {
-    from {
-      left: 4rem;
-    }
-    to {
-      left: 0;
-      opacity: 1;
-    }
-  }
   @keyframes s-card-3 {
     from {
       left: 4rem;
@@ -315,4 +236,4 @@
       opacity: 1;
     }
   }
-}/*# sourceMappingURL=services.css.map */
+}/*# sourceMappingURL=about.css.map */

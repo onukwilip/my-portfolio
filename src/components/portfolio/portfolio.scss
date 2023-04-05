@@ -15,51 +15,108 @@
   }
 }
 
-.projects {
+.project {
+  width: 100vw;
+  padding: 1rem;
+  @include flex2(center, center, 0, row);
+  position: relative;
   .img-container {
-    @include flex2(start, center, 0, row);
-    position: relative;
-    max-width: 16.7rem;
-    border-radius: 20px;
-    overflow-y: hidden;
-    cursor: pointer;
+    border-radius: 5px;
+    overflow: hidden;
     img {
-      height: 200px;
-      border-radius: 20px;
-      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
-      width: 16.7rem;
+      width: 700px;
+      height: 450px;
       object-fit: cover;
-    }
-    .overlay {
-      height: 200px;
-      width: 16.7rem;
-      border-radius: 20px;
-      position: absolute;
-      background-color: rgba(0, 0, 0, 0.5);
-      top: 0;
-      @include flex2(center, center, 0, column);
-      font-size: 30px;
-      font-weight: bold;
-    }
-    &:hover {
-      .overlay {
-        animation: slideOut 0.5s forwards;
+      object-position: center;
+      filter: grayscale(100%) blur(5px);
+      cursor: pointer;
+      transition: 500ms;
+      &:hover {
+        filter: grayscale(0%);
       }
     }
   }
-
-  .description {
-    width: 320px;
-    word-wrap: break-word;
-    font-size: 17px;
-    text-align: center;
+  .content-container {
+    background: rgba(black, 0.1);
+    padding: 1rem;
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    @include flex2(flex-end, center, 10px, column);
+    width: 500px;
+    position: relative;
+    right: 4rem;
+    transition: 500ms;
+    cursor: pointer;
+    .header {
+      width: 100%;
+      @include flex2(flex-end, center, 7px, column);
+      em {
+        font-weight: bold;
+        &:first-of-type {
+          font-size: 16px;
+          color: darken(#800080, 5);
+        }
+        &:last-of-type {
+          font-size: 25px;
+        }
+      }
+    }
+    .content {
+      min-height: 100px;
+      width: 100%;
+      background: darken(#800080, 5);
+      border-radius: 5px;
+      color: white;
+      padding: 1rem;
+      text-align: right;
+      font-size: 16px;
+    }
+    .tech {
+      @include flex2(center, flex-end, 10px, row);
+      flex-wrap: wrap;
+      em {
+        font-size: 15px;
+        color: darkblue;
+      }
+    }
+    .actions {
+      @include flex2(center, flex-end, 1rem, row);
+      i {
+        font-size: 25px;
+        transition: 200ms;
+        &:hover {
+          color: darken(#800080, 5);
+        }
+      }
+    }
+    &:hover {
+      transform: scale(1.03);
+    }
   }
-  .links {
-    @include flex(center);
-    justify-content: center;
-    margin-top: 10px;
-    button {
-      box-shadow: none;
+
+  @include media(max, 801px) {
+    min-height: 700px;
+    justify-content: start;
+    .content-container {
+      width: 70vw;
+      position: absolute;
+      right: 1rem;
+      bottom: 2rem;
+    }
+    .img-container {
+      width: 70vw;
+      height: auto;
+    }
+  }
+
+  @include media(max, 501px) {
+    .content-container {
+      position: absolute;
+      width: 90vw;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      left: 0;
     }
   }
 }

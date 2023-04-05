@@ -99,23 +99,19 @@
 }
 
 .card-1-animate {
-  -webkit-animation: card-1 1.5s forwards;
-          animation: card-1 1.5s forwards;
+  animation: card-1 1.5s forwards;
 }
 
 .card-2-animate {
-  -webkit-animation: card-2 1.5s forwards;
-          animation: card-2 1.5s forwards;
+  animation: card-2 1.5s forwards;
 }
 
 .card-3-animate {
-  -webkit-animation: card-3 1.5s forwards;
-          animation: card-3 1.5s forwards;
+  animation: card-3 1.5s forwards;
 }
 
 .emoji-animate {
-  -webkit-animation: emoji 1.5s forwards;
-          animation: emoji 1.5s forwards;
+  animation: emoji 1.5s forwards;
 }
 
 .card-1 {
@@ -147,31 +143,12 @@
   opacity: 0;
 }
 
-@-webkit-keyframes emoji {
-  0% {
-    left: -7rem;
-  }
-  100% {
-    left: -4rem;
-    opacity: 1;
-  }
-}
-
 @keyframes emoji {
   0% {
     left: -7rem;
   }
   100% {
     left: -4rem;
-    opacity: 1;
-  }
-}
-@-webkit-keyframes card-1 {
-  from {
-    right: -2rem;
-  }
-  to {
-    right: 0;
     opacity: 1;
   }
 }
@@ -184,30 +161,12 @@
     opacity: 1;
   }
 }
-@-webkit-keyframes card-2 {
-  from {
-    left: -2rem;
-  }
-  to {
-    left: 0;
-    opacity: 1;
-  }
-}
 @keyframes card-2 {
   from {
     left: -2rem;
   }
   to {
     left: 0;
-    opacity: 1;
-  }
-}
-@-webkit-keyframes card-3 {
-  from {
-    right: -2rem;
-  }
-  to {
-    right: 0;
     opacity: 1;
   }
 }
@@ -238,15 +197,8 @@
   width: 2px;
   height: 100%;
   border-left: 2px solid purple;
-  -webkit-animation: typing 1s steps(10) infinite;
-          animation: typing 1s steps(10) infinite;
+  animation: typing 1s steps(10) infinite;
   opacity: 1;
-}
-
-@-webkit-keyframes typing {
-  50% {
-    opacity: 0;
-  }
 }
 
 @keyframes typing {
@@ -323,30 +275,12 @@
   .r-side .card-3 {
     right: -3rem;
   }
-  @-webkit-keyframes emoji {
-    0% {
-      left: -11rem;
-    }
-    100% {
-      left: -8rem;
-      opacity: 1;
-    }
-  }
   @keyframes emoji {
     0% {
       left: -11rem;
     }
     100% {
       left: -8rem;
-      opacity: 1;
-    }
-  }
-  @-webkit-keyframes card-1 {
-    from {
-      right: -8rem;
-    }
-    to {
-      right: -5rem;
       opacity: 1;
     }
   }
@@ -359,30 +293,12 @@
       opacity: 1;
     }
   }
-  @-webkit-keyframes card-2 {
-    from {
-      left: -6rem;
-    }
-    to {
-      left: -3rem;
-      opacity: 1;
-    }
-  }
   @keyframes card-2 {
     from {
       left: -6rem;
     }
     to {
       left: -3rem;
-      opacity: 1;
-    }
-  }
-  @-webkit-keyframes card-3 {
-    from {
-      right: -6rem;
-    }
-    to {
-      right: -3rem;
       opacity: 1;
     }
   }

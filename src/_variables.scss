@@ -1,8 +1,4 @@
-$primary-color: linear-gradient(
-  to top left,
-  rgba(6, 2, 255, 0.9),
-  rgba(0, 0, 225, 0.3)
-);
+$primary-color: linear-gradient(to top left, rgba(6, 2, 255, 0.9), rgba(0, 0, 225, 0.3));
 
 $shadow: 2px 3px 20px rgba(0, 0, 225, 0.5);
 
@@ -19,6 +15,11 @@ $pry-text: rgba(0, 0, 225, 0.7);
   align-items: $al;
   justify-content: $jc;
   flex-direction: $fd;
+}
+@mixin media($prefix, $size) {
+  @media (#{$prefix}-width: $size) {
+    @content;
+  }
 }
 
 $padding: 30px 60px;

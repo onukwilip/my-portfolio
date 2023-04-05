@@ -32,8 +32,7 @@
   bottom: -3rem;
 }
 .w-main .w-r-side .bg .circle-animate {
-  -webkit-animation: circle-animate 1.5s forwards;
-          animation: circle-animate 1.5s forwards;
+  animation: circle-animate 1.5s forwards;
 }
 .w-main .w-r-side .bg .circle {
   width: 400px;
@@ -76,14 +75,6 @@
 }
 .w-main .w-r-side .bg .circle .img-center img {
   transform: scale(0.5);
-}
-@-webkit-keyframes circle-animate {
-  from {
-    transform: rotate(90deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
 }
 @keyframes circle-animate {
   from {

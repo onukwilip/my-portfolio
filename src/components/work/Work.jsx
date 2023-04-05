@@ -15,9 +15,8 @@ const Work = () => {
             <h2>Works for all these</h2>
             <h1 className="highlight">Brands and Clients</h1>
             <p className="text">
-              I am a freelancer and i display and work for the top freelancing
-              companies in the world! E.g Fiverr, Upwork, Kwork, Freelancer,
-              Truelancer and so on...
+              I am a freelancer and at top freelancing companies in the world!
+              E.g Fiverr, Upwork, Kwork, Freelancer, Truelancer and so on...
             </p>
             <br />
             <br />
@@ -28,8 +27,8 @@ const Work = () => {
         </div>
         <div className="col-xl-6 w-r-side">
           <div className="bg">
-            <div className="bg-circle bg-circle-2" style={{}}></div>
-            <div className="bg-circle bg-circle-1" style={{}}></div>
+            <div className="bg-circle bg-circle-2"></div>
+            <div className="bg-circle bg-circle-1"></div>
             <div className="circle">
               <a
                 href="https://www.truelancer.com/freelancer/princeonukwili"

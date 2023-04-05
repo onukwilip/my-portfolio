@@ -8,6 +8,10 @@
   position: relative;
 }
 
+em {
+  font-style: normal;
+}
+
 .blob {
   position: absolute;
   left: -500px;
@@ -26,7 +30,6 @@ button {
   border: none;
   background: linear-gradient(to top left, rgba(6, 2, 255, 0.9), rgba(0, 0, 225, 0.3));
   color: white;
-  box-shadow: 2px 3px 20px rgba(0, 0, 225, 0.5);
 }
 button:hover {
   background-image: linear-gradient(to top left, rgba(255, 2, 2, 0.5), rgba(0, 0, 225, 0.5));

@@ -234,7 +234,6 @@ const Home = () => {
     <>
       <section className="row home-main" id="Home">
         <div className="col-xl-6 l-side">
-          {/* <div className="background"></div> */}
           <div className="flex intro">
             <h1>Hy! I'm</h1>
             <h1 className="name">Prince</h1>
@@ -251,8 +250,8 @@ const Home = () => {
           <br />
           <div className="desc">
             <span>
-              Frontend Developer with high level of experience in web designing
-              and development, producting the Quality work
+              Hello 🖐🏾 I'm Prince! I'm a software developer with over a year of
+              experience using both the .NET and JavaScript frameworks
             </span>
             <br />
             <br />
@@ -261,9 +260,27 @@ const Home = () => {
             </a>
           </div>
           <div className="media flex">
-            <img src={github} alt="" />
-            <img src={linkedin} alt="" />
-            <img src={instagram} alt="" />
+            <a
+              href="https://github.com/onukwilip"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={github} alt="" />
+            </a>
+            <a
+              href="http://www.linkedin.com/in/prince-onukwili-a82143233"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={linkedin} alt="" />
+            </a>
+            <a
+              href="http://www.instagram.com/onukwilip2006/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={instagram} alt="" />
+            </a>
           </div>
         </div>
 

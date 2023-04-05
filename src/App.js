@@ -5,7 +5,7 @@ import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import Home from "./components/home/Home";
 import Portfolio from "./components/portfolio/Portfolio";
-import Services from "./components/services/Services";
+import About from "./components/about/About";
 import Testimonial from "./components/testimonial/Testimonial";
 import Work from "./components/work/Work";
 import blob from "./img/blob.svg";
@@ -19,7 +19,7 @@ function App() {
       </div>
       <Header />
       <Home />
-      <Services />
+      <About />
       <CirclesSection />
       <Work />
       <Portfolio />

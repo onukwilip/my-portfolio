@@ -1,0 +1,27 @@
+.con-main {
+  margin-top: 150px;
+  padding: 30px 80px;
+}
+.con-main .highlight {
+  color: purple;
+  font-weight: bold;
+}
+.con-main .co-r-side form {
+  width: 70%;
+  filter: drop-shadow(2px 3px 20px rgba(0, 0, 225, 0.5));
+}
+
+@media only screen and (max-width: 370px) {
+  .con-main {
+    padding: 30px;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .con-main .co-r-side form {
+    width: 100%;
+    filter: drop-shadow(2px 3px 20px rgba(0, 0, 225, 0.5));
+  }
+  .con-main .co-r-side form .form-group {
+    width: 100%;
+  }
+}/*# sourceMappingURL=contact.css.map */

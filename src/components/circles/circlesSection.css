@@ -1,0 +1,38 @@
+.c-main {
+  padding: 30px 60px;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  transform: scale(0);
+}
+
+.c-animate {
+  -webkit-animation: c-main 1.5s forwards;
+          animation: c-main 1.5s forwards;
+}
+
+@-webkit-keyframes c-main {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes c-main {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@media only screen and (max-width: 420px) {
+  .c-main {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}/*# sourceMappingURL=circlesSection.css.map */

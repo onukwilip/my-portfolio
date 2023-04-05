@@ -1,0 +1,17 @@
+@import "../../variables";
+
+.card {
+  display: flex;
+  flex-direction: row;
+  box-shadow: $shadow;
+  align-items: center;
+  padding: 10px 30px;
+  top: 0px;
+  img {
+    width: 70px;
+    height: 70px;
+  }
+  span {
+    font-size: 15px;
+  }
+}

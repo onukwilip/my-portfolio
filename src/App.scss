@@ -1,0 +1,41 @@
+@import "./_variables.scss";
+
+.App {
+  max-width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+    to top left,
+    rgba(255, 2, 2, 0.5),
+    rgba(0, 0, 225, 0.5)
+  );
+  overflow-x: hidden;
+  word-wrap: break-word;
+  color: $pry-text;
+  position: relative;
+}
+.blob {
+  position: absolute;
+  left: -500px;
+  top: -400px;
+  z-index: -1;
+  img {
+    width: 1500px;
+    height: 1500px;
+  }
+}
+button {
+  padding: 10px 25px;
+  font-size: 14px;
+  border-radius: 25px;
+  border: none;
+  background: $primary-color;
+  color: white;
+  box-shadow: 2px 3px 20px rgba(0, 0, 225, 0.5);
+  &:hover {
+    background-image: linear-gradient(
+      to top left,
+      rgba(255, 2, 2, 0.5),
+      rgba(0, 0, 225, 0.5)
+    );
+  }
+}

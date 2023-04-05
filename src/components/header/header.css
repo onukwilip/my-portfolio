@@ -1,0 +1,172 @@
+header {
+  color: #fff;
+  padding: 30px 60px;
+}
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+header a:hover {
+  color: purple;
+}
+header span.icon {
+  quotes: 40px;
+  border-radius: 50%;
+  padding: 10px;
+  border: 2px solid white;
+  display: none;
+  cursor: pointer;
+}
+header .profile {
+  display: none;
+  grid-row: 1/5;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  padding: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+header .profile > a.social {
+  padding: 0 5px;
+}
+header .profile > a.social img {
+  width: 40px;
+  height: 40px;
+  transition: 0.2s;
+}
+header .profile > a.social img:hover {
+  transform: scale(1.2);
+}
+header .profile .img-container {
+  grid-column: 1/4;
+}
+header .profile .img-container img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid white;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+
+.h-row {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.h-l-side {
+  flex: 1;
+}
+
+.h-r-side {
+  flex: 1;
+}
+
+.flex {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.h-flex {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  list-style-type: none;
+  gap: 2rem;
+  justify-content: right;
+}
+.menu > li {
+  cursor: pointer;
+}
+
+.show {
+  position: fixed;
+  left: 0;
+  top: 0 !important;
+  height: 98vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  list-style-type: none;
+  z-index: 999;
+  margin: 5px 0;
+  padding: 3rem 20px;
+  border-radius: 10px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-auto-rows: minmax(10px, auto);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  text-align: center;
+  -webkit-animation: slideIn 0.5s ease forwards;
+          animation: slideIn 0.5s ease forwards;
+}
+.show > li {
+  cursor: pointer;
+  width: 100%;
+  padding: 5px 0;
+}
+.show > li:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+}
+
+@-webkit-keyframes slideIn {
+  from {
+    left: -1000px;
+  }
+  to {
+    left: 5px;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    left: -1000px;
+  }
+  to {
+    left: 5px;
+  }
+}
+@media only screen and (max-width: 1032px) {
+  header .h-row {
+    align-items: baseline;
+  }
+  header .h-r-side {
+    transform: scale(0.9);
+  }
+}
+@media only screen and (max-width: 850px) {
+  .h-row {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 770px) {
+  header span.icon {
+    display: block;
+  }
+  header .profile {
+    display: grid;
+  }
+  .h-row {
+    flex-direction: row;
+  }
+  .menu {
+    display: none;
+  }
+}/*# sourceMappingURL=header.css.map */

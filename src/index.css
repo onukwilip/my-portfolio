@@ -1,0 +1,36 @@
+@font-face {
+  font-family: Gumela;
+  src: url("./fonts/Gumela\ Regular.otf");
+}
+* {
+  font-family: "Gumela";
+  font-weight: normal;
+  font-size: 20px;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 85vh;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 10px;
+  background: linear-gradient(transparent, purple);
+  border-radius: 100px;
+  height: 30vh;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 100px;
+  background: rgba(0, 0, 225, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent, rgba(6, 2, 255, 0.9));
+}

@@ -1,0 +1,27 @@
+.footer {
+  position: relative;
+  overflow-y: hidden;
+  height: 500px;
+}
+.footer .img {
+  position: absolute;
+  height: 500px;
+  width: 100% !important;
+}
+.footer .content {
+  position: relative;
+  top: 13rem;
+  left: 0%;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-direction: column;
+}
+.footer .content p,
+.footer .content h2 {
+  line-height: 9px;
+}
+.footer .content .social img {
+  width: 80px;
+  height: auto;
+}/*# sourceMappingURL=footer.css.map */

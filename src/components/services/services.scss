@@ -1,0 +1,247 @@
+@import "../../variables";
+
+* {
+  color: #fff;
+}
+.services {
+  height: 900px;
+  .s-main {
+    padding: 30px 80px;
+  }
+
+  .s-l-side {
+    position: relative;
+    color: wheat;
+  }
+  .background {
+    background: $pry-text;
+    border-radius: 50%;
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    left: -50px;
+    filter: blur(20px);
+    z-index: -2;
+  }
+  .s-intro {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 2rem;
+    h1 {
+      line-height: 60px;
+    }
+    .intro-services {
+      font-weight: bolder;
+      color: purple;
+      filter: drop-shadow(0px 0px 30px white);
+    }
+  }
+  .desc {
+    padding: 20px 0;
+    color: $pry-text;
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    span,
+    li {
+      font-size: 16px;
+      line-height: 30px;
+      filter: drop-shadow(0px 0px 30px purple);
+    }
+  }
+
+  .media {
+    top: 2rem;
+    position: relative;
+    img {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  .s-r-side {
+    position: relative;
+    color: wheat;
+    padding: 30px 80px;
+  }
+
+  .s-card-1-animate {
+    animation: s-card-1 1.5s forwards;
+  }
+  .s-card-2-animate {
+    animation: s-card-2 1.5s forwards;
+  }
+  .s-card-3-animate {
+    animation: s-card-3 1.5s forwards;
+  }
+
+  .s-card-1 {
+    position: absolute;
+    top: -60px;
+    right: 0;
+    opacity: 0;
+  }
+
+  .s-card-2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+  }
+
+  .s-card-3 {
+    position: absolute;
+    top: 20.5rem;
+    right: 4.5rem;
+    opacity: 0;
+  }
+}
+
+@keyframes s-card-1 {
+  from {
+    right: -4rem;
+  }
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes s-card-2 {
+  from {
+    left: -4rem;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes s-card-3 {
+  from {
+    right: 7rem;
+  }
+  to {
+    right: 4.5rem;
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .services {
+    height: 1000px;
+    .s-r-side {
+      display: flex;
+      gap: 2rem;
+      padding: 30px 0px;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      * {
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+  @keyframes s-card-1 {
+    from {
+      top: -4rem;
+    }
+    to {
+      top: 0;
+      opacity: 1;
+    }
+  }
+
+  @keyframes s-card-2 {
+    from {
+      top: 8rem;
+    }
+    to {
+      top: 0rem;
+      opacity: 1;
+    }
+  }
+
+  @keyframes s-card-3 {
+    from {
+      top: -7rem;
+    }
+    to {
+      top: 0;
+      opacity: 1;
+    }
+  }
+}
+@media only screen and (max-width: 850px) {
+  .s-r-side {
+    justify-content: center;
+    transform: scale(0.75);
+    padding: 0;
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .services {
+    height: 1150px;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .services {
+    height: 2070px;
+    .s-l-side {
+      text-align: center;
+      .s-intro {
+        @include flex(center);
+        justify-content: center;
+        gap: 0;
+      }
+      .desc > ul {
+        font-size: 16px;
+      }
+    }
+
+    .s-r-side {
+      flex-direction: column;
+      padding: 0;
+      margin: 0;
+      margin-top: -4rem;
+    }
+  }
+
+  @keyframes s-card-1 {
+    from {
+      left: 4rem;
+    }
+    to {
+      left: 0;
+      opacity: 1;
+    }
+  }
+
+  @keyframes s-card-2 {
+    from {
+      left: -4rem;
+    }
+    to {
+      left: 0;
+      opacity: 1;
+    }
+  }
+
+  @keyframes s-card-3 {
+    from {
+      left: 4rem;
+    }
+    to {
+      left: 0;
+      opacity: 1;
+    }
+  }
+}

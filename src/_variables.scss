@@ -1,0 +1,25 @@
+$primary-color: linear-gradient(
+  to top left,
+  rgba(6, 2, 255, 0.9),
+  rgba(0, 0, 225, 0.3)
+);
+
+$shadow: 2px 3px 20px rgba(0, 0, 225, 0.5);
+
+$pry-text: rgba(0, 0, 225, 0.7);
+
+@mixin flex($position) {
+  display: flex;
+  gap: 1rem;
+  align-items: $position;
+}
+@mixin flex2($al, $jc, $gap, $fd) {
+  display: flex;
+  gap: $gap;
+  align-items: $al;
+  justify-content: $jc;
+  flex-direction: $fd;
+}
+
+$padding: 30px 60px;
+$padding2: 30px 80px;

@@ -1,5 +1,5 @@
 .p-contain {
-  margin-top: 150px;
+  margin-top: 50px;
 }
 
 .p-main {
@@ -155,6 +155,9 @@
   }
 }
 @media (max-width: 501px) {
+  .project {
+    min-height: 400px;
+  }
   .project .img-container {
     position: absolute;
     width: 90vw;

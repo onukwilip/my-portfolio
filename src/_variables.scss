@@ -4,6 +4,8 @@ $shadow: 2px 3px 20px rgba(0, 0, 225, 0.5);
 
 $pry-text: rgba(0, 0, 225, 0.7);
 
+$pry-color: darken(#800080, 5);
+
 @mixin flex($position) {
   display: flex;
   gap: 1rem;

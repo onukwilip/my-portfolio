@@ -1,4 +1,33 @@
 @import "../../variables.scss";
+
+@mixin inverted() {
+  background: white;
+  color: $pry-color;
+  &::before {
+    content: "";
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -2.5px;
+    background: $pry-color;
+  }
+}
+
+@mixin inverted-horizontal() {
+  background: white;
+  color: $pry-color;
+  &::before {
+    content: "";
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    top: 95%;
+    left: 0;
+    background: $pry-color;
+  }
+}
+
 .w-main {
   padding: $padding2;
   margin-top: 130px;
@@ -10,74 +39,118 @@
     font-size: 16px;
   }
 
+  @include media(max, 651px) {
+    padding: 30px 1rem;
+    // padding: 0;
+    transform: scale(0.9);
+  }
+
+  .w-l-side {
+    @include media(max, 1201px) {
+      .action {
+        display: none;
+      }
+    }
+  }
+
   .w-r-side {
-    .bg {
-      position: relative;
-      display: flex;
-      align-content: center;
-      justify-content: center;
-      .bg-circle {
-        width: 270px;
-        height: 270px;
-        position: absolute;
-        border-radius: 50%;
-      }
-
-      .bg-circle-1 {
-        background: darkblue;
-        right: 0.5rem;
-        top: -3rem;
-      }
-
-      .bg-circle-2 {
-        background: purple;
-        right: 0.5rem;
-        bottom: -3rem;
-      }
-
-      .circle-animate {
-        animation: circle-animate 1.5s forwards;
-      }
-
-      .circle {
-        width: 400px;
-        height: 400px;
-        border-radius: 50%;
-        background: white;
+    @include grid(0.4fr 1fr, auto, 1rem);
+    .places-worked-list {
+      padding: 0;
+      list-style-type: none;
+      li {
+        padding: 10px;
+        font-size: 16px;
+        border-left: 1px solid $pry-color;
+        cursor: pointer;
+        transition: 200ms;
         position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0px 10px 70px rgba(0, 0, 225, 0.5);
-        transform: rotate(90deg);
-        .img-circle {
-          position: absolute;
-          border-radius: 50%;
-          background-color: #fff;
-          width: 130px;
-          height: 130px;
-          display: flex;
-          align-content: center;
-          justify-content: center;
-          border: 5px solid gray;
-          box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
-          img {
-            transform: scale(0.5);
+        &.active {
+          @include inverted();
+          &:hover {
+            @include inverted();
           }
         }
-        .img-center {
+        &:hover {
+          @include inverted();
+          &::before {
+            content: none;
+          }
+        }
+      }
+    }
+    .content {
+      @include flex2(start, start, 1rem, column);
+      .header {
+        @include flex2(start, center, 0, column);
+        em {
+          font-size: 18px;
+          font-weight: bold;
+          a {
+            font-size: 18px;
+            color: $pry-color;
+            text-decoration: none;
+            font-weight: bold;
+          }
+        }
+        code {
+          color: white;
+        }
+      }
+      .desctiption {
+        font-size: 17px;
+        & * {
+          font-size: 17px;
+        }
+        ul {
+          list-style-type: none;
+          padding: 0;
+        }
+        li {
           position: relative;
-          border-radius: 50%;
-          background-color: #fff;
-          width: 130px;
-          height: 130px;
-          display: flex;
-          align-content: center;
-          justify-content: center;
-          border: 5px solid gray;
-          box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
-          img {
-            transform: scale(0.5);
+          @include flex2(start, start, 1rem, row);
+          &::before {
+            content: "🖊";
+            width: 10px;
+            height: 10px;
+            position: relative;
+            left: 0;
+            top: 0;
+            color: $pry-color;
+          }
+        }
+      }
+    }
+    @include media(max, 1201px) {
+      padding: 2rem 0;
+    }
+    @include media(max, 551px) {
+      grid-template-columns: repeat(1, 1fr);
+      width: 100%;
+      .places-worked-list {
+        @include flex2(end, start, 1rem, row);
+        border-bottom: 1px solid $pry-color;
+        width: auto;
+        overflow-x: auto;
+        overflow-y: hidden;
+        width: 100%;
+        &::-webkit-scrollbar {
+          height: 5px;
+        }
+        &::-webkit-scrollbar-track {
+          background: white;
+        }
+        &::-webkit-scrollbar-thumb {
+          background: $pry-color;
+        }
+        li {
+          border-left: 0;
+          position: relative;
+          &.active {
+            @include inverted-horizontal();
+            &:hover {
+              @include inverted-horizontal();
+            }
           }
         }
       }
@@ -90,73 +163,6 @@
     }
     to {
       transform: rotate(0deg);
-    }
-  }
-}
-
-@media only screen and (max-width: 1200px) {
-  .w-main {
-    .w-l-side {
-      height: 400px;
-    }
-    .w-r-side {
-      .bg {
-        .bg-circle-1 {
-          right: 7rem;
-        }
-        .bg-circle-2 {
-          right: 7rem;
-        }
-      }
-    }
-  }
-}
-@media only screen and (max-width: 850px) {
-  .w-main {
-    .w-l-side {
-      height: 400px;
-    }
-  }
-}
-@media only screen and (max-width: 770px) {
-  .w-main {
-    .w-r-side {
-      .bg {
-        .bg-circle-1 {
-          top: 10rem;
-          right: -1rem;
-        }
-        .bg-circle-2 {
-          top: -4rem;
-          right: -1rem;
-        }
-      }
-    }
-  }
-}
-@media only screen and (max-width: 420px) {
-  .w-main {
-    height: 800px;
-    .w-l-side {
-      height: 660px;
-    }
-    .w-r-side {
-      position: relative;
-      .bg {
-        transform: scale(0.5);
-        margin-top: -4rem;
-        .bg-circle-1 {
-          top: 10rem;
-          right: -10rem;
-        }
-        .bg-circle-2 {
-          top: -4rem;
-          right: -10rem;
-        }
-        .circle {
-          position: absolute;
-        }
-      }
     }
   }
 }

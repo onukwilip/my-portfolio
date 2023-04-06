@@ -8,6 +8,11 @@
 .services .s-main {
   padding: 30px 80px;
 }
+@media (max-width: 451px) {
+  .services .s-main {
+    padding: 30px 1rem;
+  }
+}
 .services .s-l-side {
   position: relative;
   color: wheat;
@@ -174,9 +179,10 @@
   }
 }
 @media only screen and (max-width: 850px) {
-  .s-r-side {
+  .services .s-r-side {
     justify-content: center;
     transform: scale(0.75);
+    gap: 10px;
     padding: 0;
     margin: 0;
   }
@@ -186,7 +192,7 @@
     height: auto;
   }
 }
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 601px) {
   .services {
     height: auto;
   }

@@ -1,8 +1,7 @@
 @import "../../variables";
-$pry-color: darken(#800080, 5);
 
 .p-contain {
-  margin-top: 150px;
+  margin-top: 50px;
 }
 
 .p-main {
@@ -133,6 +132,7 @@ $pry-color: darken(#800080, 5);
   }
 
   @include media(max, 501px) {
+    min-height: 400px;
     .img-container {
       position: absolute;
       width: 90vw;

@@ -7,6 +7,9 @@
   height: 900px;
   .s-main {
     padding: 30px 80px;
+    @include media(max, 451px) {
+      padding: 30px 1rem;
+    }
   }
 
   .s-l-side {
@@ -183,22 +186,23 @@
   }
 }
 @media only screen and (max-width: 850px) {
-  .s-r-side {
-    justify-content: center;
-    transform: scale(0.75);
-    padding: 0;
-    margin: 0;
+  .services {
+    .s-r-side {
+      justify-content: center;
+      transform: scale(0.75);
+      gap: 10px;
+      padding: 0;
+      margin: 0;
+    }
   }
 }
 @media only screen and (max-width: 770px) {
   .services {
-    // height: 1150px;
     height: auto;
   }
 }
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 601px) {
   .services {
-    // height: 2070px;
     height: auto;
     .s-l-side {
       text-align: center;

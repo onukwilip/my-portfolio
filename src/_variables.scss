@@ -16,6 +16,19 @@ $pry-text: rgba(0, 0, 225, 0.7);
   justify-content: $jc;
   flex-direction: $fd;
 }
+@mixin grid($gtc, $gar, $gap, $ai: false, $ji: false) {
+  display: grid;
+  grid-template-columns: $gtc;
+  grid-auto-rows: $gar;
+  gap: $gap;
+
+  @if ($ai != false) {
+    align-items: $ai;
+  }
+  @if ($ji != false) {
+    justify-items: $ji;
+  }
+}
 @mixin media($prefix, $size) {
   @media (#{$prefix}-width: $size) {
     @content;

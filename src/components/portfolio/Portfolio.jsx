@@ -1,11 +1,9 @@
 import React from "react";
 import "./portfolio.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
 import gochat from "../../img/gochat-tau.vercel.app_ (1).png";
 import gopack from "../../img/GOPack.gif";
 import nigtrak from "../../img/nigtrak.png";
+import lendSqr from "../../img/Lendsqr-fe-test.png";
 import onlineAuction from "../../img/onlineAuction.png";
 import expense from "../../img/goit-expenses.netlify.app_.png";
 import meetup from "../../img/goit-meetup.netlify.app_.png";
@@ -62,6 +60,23 @@ const portfolioArray = [
       "Git",
     ],
     desc: "This is a chat web application where users from around the world can sign up and communicate with thier family and friends. It was developed using React Js, Next Js and SCSS for the frontend. .NET, C# and MSSQL for it's backend, and Node Js for the web socket. ",
+  },
+  {
+    id: 5,
+    name: "LendSQR Dashboard",
+    image: lendSqr,
+    githubLink: "https://github.com/onukwilip/lendsqr-fe-test",
+    demoLink: "http://prince-c-onukwili-lendsqr-fe-test.netlify.app/",
+    tech: [
+      "React Js",
+      "SCSS",
+      "Jest",
+      "REST API",
+      "React testing library",
+      "Docker",
+      "Git",
+    ],
+    desc: "This is a UI dashboard/website developed for an interview i had with LendSQR. It was developed using React Js and SCSS for the frontend, Jest and React testing library for Unit and integration tests and Docker for deploying to containers. ",
   },
 ];
 
@@ -123,33 +138,9 @@ const otherProjects = [
   },
 ];
 
-const settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  responsive: [
-    {
-      breakpoint: 800,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 400,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-};
-
 const Project = (/**@type portfolioArray[0] */ { eachProject }) => {
   return (
-    <div className="project">
+    <div className="project" align="center">
       <div className="img-container">
         <img src={eachProject?.image} alt="" />
       </div>
@@ -179,22 +170,67 @@ const Project = (/**@type portfolioArray[0] */ { eachProject }) => {
   );
 };
 
+const OtherProjects = (/**@type portfolioArray[0] */ { eachProject }) => {
+  return (
+    <div className="other-project">
+      <div className="actions-container">
+        <a href={eachProject?.githubLink} target="_blank">
+          <i class="fa-regular fa-folder"></i>
+        </a>
+        <div className="actions">
+          <a href={eachProject?.githubLink} target="_blank">
+            <i className="fa-brands fa-github"></i>
+          </a>
+          <a href={eachProject?.demoLink} target="_blank">
+            <i className="fa-solid fa-link"></i>
+          </a>
+        </div>
+      </div>
+      <div className="content-container">
+        <div className="header">{eachProject?.name}</div>
+        <div className="content">{eachProject?.desc}</div>
+      </div>
+      <div className="tech">
+        {eachProject?.tech?.map((eachTech) => (
+          <>
+            <em href="">{eachTech}</em>
+          </>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 const Portfolio = () => {
   return (
     <section className="p-contain" id="Portfolio">
       <section className="p-main">
         <div className="head">
-          <h2>Recent Projects</h2>
+          <h2>Featured Projects</h2>
           <h1 className="highlight">I've developed</h1>
         </div>
         <br />
       </section>
       <div>
-        <Slider {...settings} className="slider">
-          {portfolioArray.map((eachProject) => {
-            return <Project key={eachProject.id} eachProject={eachProject} />;
-          })}
-        </Slider>
+        {portfolioArray.map((eachProject) => {
+          return <Project key={eachProject.id} eachProject={eachProject} />;
+        })}
+      </div>
+      <br />
+      <br />
+      <section className="p-main">
+        <div className="head">
+          <h2>Other Noteworthy</h2>
+          <h1 className="highlight">Projects</h1>
+        </div>
+        <br />
+      </section>
+      <div className="other-projects-container">
+        {otherProjects.map((eachProject) => {
+          return (
+            <OtherProjects key={eachProject.id} eachProject={eachProject} />
+          );
+        })}
       </div>
     </section>
   );

@@ -163,20 +163,6 @@
   }
 }
 
-.project-animate-in {
-  animation: slide-in-left 1s forwards;
-  &:nth-of-type(2n) {
-    animation: slide-in-right 1s forwards;
-  }
-}
-
-.project-animate-out {
-  animation: slide-out-left 1s forwards;
-  &:nth-of-type(2n) {
-    animation: slide-out-right 1s forwards;
-  }
-}
-
 .other-projects-container {
   padding: 1rem 8rem;
   @include grid(repeat(3, 1fr), auto, 2rem);
@@ -250,42 +236,6 @@
   }
   to {
     left: 1000px;
-  }
-}
-
-@keyframes slide-in-left {
-  from {
-    left: 1000px;
-  }
-  to {
-    left: 0;
-  }
-}
-
-@keyframes slide-in-right {
-  from {
-    right: 1000px;
-  }
-  to {
-    right: 0;
-  }
-}
-
-@keyframes slide-out-left {
-  from {
-    left: 0;
-  }
-  to {
-    left: 1000px;
-  }
-}
-
-@keyframes slide-out-right {
-  from {
-    right: 0;
-  }
-  to {
-    right: 1000px;
   }
 }
 

@@ -7,19 +7,6 @@
   // transform: scale(0);
 }
 
-.c-animate {
-  animation: c-main 1.5s forwards;
-}
-
-@keyframes c-main {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-
 @media only screen and (max-width: 1032px) {
 }
 @media only screen and (max-width: 850px) {

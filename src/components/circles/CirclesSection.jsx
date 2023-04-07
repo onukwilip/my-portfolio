@@ -2,17 +2,28 @@ import React, { useEffect, useRef } from "react";
 import Circles from "./Circles";
 import "./circlesSection.css";
 import { useInView } from "react-intersection-observer";
+import { useAnimation, motion } from "framer-motion";
 
 const CirclesSection = () => {
   const [circlesRef, inView] = useInView();
   const circlesId = document.getElementById("Circles");
+  const control = useAnimation();
+
+  const variants = {
+    initial: {
+      scale: 0,
+    },
+    animate: {
+      scale: 1,
+    },
+  };
 
   const addAnimation = () => {
-    circlesId?.classList?.add("c-animate");
+    control.start("animate");
   };
 
   const removeAnimation = () => {
-    circlesId?.classList?.remove("c-animate");
+    control.start("initial");
   };
 
   useEffect(() => {
@@ -21,10 +32,17 @@ const CirclesSection = () => {
     } else {
       removeAnimation();
     }
-  }, [inView]);
+  }, [inView, control]);
 
   return (
-    <section className="c-main" id="Circles" ref={circlesRef}>
+    <motion.section
+      variants={variants}
+      initial="initial"
+      animate={control}
+      className="c-main"
+      id="Circles"
+      ref={circlesRef}
+    >
       <div>
         <Circles num={"30+"} head={"GitHub"} highlight={"Repositories"} />
       </div>
@@ -34,7 +52,7 @@ const CirclesSection = () => {
       <div>
         <Circles num={"5+"} head={"Industry level"} highlight={"Projects"} />
       </div>
-    </section>
+    </motion.section>
   );
 };
 

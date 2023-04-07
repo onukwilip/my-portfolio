@@ -1,16 +1,39 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import "./about.css";
-import humble from "../../img/humble.png";
-import heart from "../../img/heartemoji.png";
-import glasses from "../../img/glasses.png";
 import canva from "../../img/canva.png";
 import dotNet from "../../img/DotNET.png";
 import nextjs from "../../img/nextjs.png";
 
 import TCard from "../tCards/TCard";
 import CV from "./PrinceOnukwiliResume.pdf";
+import { useInView } from "react-intersection-observer";
 
 const About = () => {
+  const [ref, inView] = useInView();
+  const tCard1Ref = useRef();
+  const tCard2Ref = useRef();
+  const tCard3Ref = useRef();
+
+  const addAnimation = () => {
+    tCard1Ref.current?.classList?.add("s-card-1-animate");
+    tCard2Ref.current?.classList?.add("s-card-2-animate");
+    tCard3Ref.current?.classList?.add("s-card-3-animate");
+  };
+
+  const removeAnimation = () => {
+    tCard1Ref.current?.classList?.remove("s-card-1-animate");
+    tCard2Ref.current?.classList?.remove("s-card-2-animate");
+    tCard3Ref.current?.classList?.remove("s-card-3-animate");
+  };
+
+  useEffect(() => {
+    if (inView) {
+      addAnimation();
+    } else {
+      removeAnimation();
+    }
+  }, [inView]);
+
   return (
     <>
       <section className="services" id="About">
@@ -42,49 +65,22 @@ const About = () => {
               </a>
             </div>
           </div>
-          <div className="col-xl-6 s-r-side">
-            <div
-              className="s-card-1"
-              style={
-                {
-                  // position: "absolute",
-                  // top: -20,
-                  // right: 0,
-                }
-              }
-            >
+          <div className="col-xl-6 s-r-side" ref={ref}>
+            <div ref={tCard1Ref} className="s-card-1">
               <TCard
                 image={dotNet}
                 title="Software Developer"
                 text="Develops server side and Desktop applications using technologies like the .NET framewor, C#, MSSQL, etc"
               />
             </div>
-            <div
-              className="s-card-2"
-              style={
-                {
-                  // position: "absolute",
-                  // bottom: 0,
-                  // left: 0,
-                }
-              }
-            >
+            <div ref={tCard2Ref} className="s-card-2">
               <TCard
                 image={nextjs}
                 title="Frontend Developer"
                 text="Designs and develop beautiful web user interface with wonderful user experience using various javascript framework like React.Js, Next.Js, Redux, Typescript...etc"
               />
             </div>
-            <div
-              className="s-card-3"
-              style={
-                {
-                  // position: "absolute",
-                  // top: "20rem",
-                  // right: "3rem",
-                }
-              }
-            >
+            <div ref={tCard3Ref} className="s-card-3">
               <TCard
                 image={canva}
                 title="Product Designer"

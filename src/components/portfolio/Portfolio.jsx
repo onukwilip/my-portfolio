@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./portfolio.css";
 import gochat from "../../img/gochat-tau.vercel.app_ (1).png";
 import gopack from "../../img/GOPack.gif";
@@ -12,6 +12,8 @@ import streamIt from "../../img/goit-streamit.netlify.app_.png";
 import hopeAtLast from "../../img/hope-at-last.netlify.app_.png";
 import goit from "../../img/onukwilip.github.io_GO-IT_.png";
 import { useState } from "react";
+import { useInView } from "react-intersection-observer";
+import { useAnimation, motion } from "framer-motion";
 
 const portfolioArray = [
   {
@@ -139,8 +141,28 @@ const otherProjects = [
 ];
 
 const Project = (/**@type portfolioArray[0] */ { eachProject }) => {
+  const [ref, inView] = useInView();
+  const projectNode = document.getElementById(eachProject?.name);
+
+  const addAnimation = () => {
+    projectNode?.classList?.add("project-animate-in");
+    projectNode?.classList?.remove("project-animate-out");
+  };
+
+  const removeAnimation = () => {
+    projectNode?.classList?.remove("project-animate-in");
+    projectNode?.classList?.add("project-animate-out");
+  };
+
+  useEffect(() => {
+    if (inView) {
+      addAnimation();
+    } else {
+      removeAnimation();
+    }
+  }, [inView]);
   return (
-    <div className="project" align="center">
+    <div className="project" align="center" id={eachProject?.name} ref={ref}>
       <div className="img-container">
         <img src={eachProject?.image} alt="" />
       </div>
@@ -170,9 +192,46 @@ const Project = (/**@type portfolioArray[0] */ { eachProject }) => {
   );
 };
 
-const OtherProjects = (/**@type portfolioArray[0] */ { eachProject }) => {
+const OtherProjects = (
+  /**@type portfolioArray[0] */ { eachProject, index }
+) => {
+  const [ref, inView] = useInView();
+  const control = useAnimation();
+
+  const variants = {
+    initial: {
+      x: -300,
+    },
+    animate: {
+      x: 0,
+    },
+  };
+
+  const addAnimation = () => {
+    control.start("animate");
+  };
+
+  const removeAnimation = () => {
+    control.start("initial");
+  };
+
+  useEffect(() => {
+    if (inView) {
+      addAnimation();
+    } else {
+      removeAnimation();
+    }
+  }, [inView, control]);
+
   return (
-    <div className="other-project">
+    <motion.div
+      variants={variants}
+      initial="initial"
+      animate={control}
+      ref={ref}
+      className="other-project"
+      transition={{ delay: index / 70 }}
+    >
       <div className="actions-container">
         <a href={eachProject?.githubLink} target="_blank">
           <i class="fa-regular fa-folder"></i>
@@ -197,7 +256,7 @@ const OtherProjects = (/**@type portfolioArray[0] */ { eachProject }) => {
           </>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -226,9 +285,13 @@ const Portfolio = () => {
         <br />
       </section>
       <div className="other-projects-container">
-        {otherProjects.map((eachProject) => {
+        {otherProjects.map((eachProject, i) => {
           return (
-            <OtherProjects key={eachProject.id} eachProject={eachProject} />
+            <OtherProjects
+              key={eachProject.id}
+              index={i}
+              eachProject={eachProject}
+            />
           );
         })}
       </div>

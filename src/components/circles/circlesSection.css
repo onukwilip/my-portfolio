@@ -5,7 +5,6 @@
   align-items: center;
   justify-content: center;
   gap: 5rem;
-  transform: scale(0);
 }
 
 .c-animate {

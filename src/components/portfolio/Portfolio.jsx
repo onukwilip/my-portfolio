@@ -140,18 +140,36 @@ const otherProjects = [
   },
 ];
 
-const Project = (/**@type portfolioArray[0] */ { eachProject }) => {
+const Project = (/**@type portfolioArray[0] */ { eachProject, index }) => {
   const [ref, inView] = useInView();
-  const projectNode = document.getElementById(eachProject?.name);
+  const control = useAnimation();
+  const variants = {
+    initialLeft: {
+      x: 500,
+      opacity: 0.5,
+    },
+    initialRight: {
+      x: -500,
+      opacity: 0.5,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+    },
+  };
+
+  const isEven = index % 2 === 0;
 
   const addAnimation = () => {
-    projectNode?.classList?.add("project-animate-in");
-    projectNode?.classList?.remove("project-animate-out");
+    control.start("animate");
   };
 
   const removeAnimation = () => {
-    projectNode?.classList?.remove("project-animate-in");
-    projectNode?.classList?.add("project-animate-out");
+    if (isEven) {
+      control.start("initialRight");
+    } else {
+      control.start("initialLeft");
+    }
   };
 
   useEffect(() => {
@@ -162,7 +180,15 @@ const Project = (/**@type portfolioArray[0] */ { eachProject }) => {
     }
   }, [inView]);
   return (
-    <div className="project" align="center" id={eachProject?.name} ref={ref}>
+    <motion.div
+      className="project"
+      align="center"
+      id={eachProject?.name}
+      ref={ref}
+      variants={variants}
+      initial={isEven ? "initialRight" : "initialLeft"}
+      animate={control}
+    >
       <div className="img-container">
         <img src={eachProject?.image} alt="" />
       </div>
@@ -188,7 +214,7 @@ const Project = (/**@type portfolioArray[0] */ { eachProject }) => {
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -201,9 +227,14 @@ const OtherProjects = (
   const variants = {
     initial: {
       x: -300,
+      opacity: 0.5,
     },
     animate: {
       x: 0,
+      opacity: 1,
+    },
+    hover: {
+      scale: 1.05,
     },
   };
 
@@ -231,6 +262,7 @@ const OtherProjects = (
       ref={ref}
       className="other-project"
       transition={{ delay: index / 70 }}
+      whileHover="hover"
     >
       <div className="actions-container">
         <a href={eachProject?.githubLink} target="_blank">
@@ -271,8 +303,10 @@ const Portfolio = () => {
         <br />
       </section>
       <div>
-        {portfolioArray.map((eachProject) => {
-          return <Project key={eachProject.id} eachProject={eachProject} />;
+        {portfolioArray.map((eachProject, i) => {
+          return (
+            <Project key={eachProject.id} eachProject={eachProject} index={i} />
+          );
         })}
       </div>
       <br />

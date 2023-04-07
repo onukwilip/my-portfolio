@@ -7,18 +7,6 @@
   gap: 5rem;
 }
 
-.c-animate {
-  animation: c-main 1.5s forwards;
-}
-
-@keyframes c-main {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
-}
 @media only screen and (max-width: 551px) {
   .c-main {
     flex-direction: column;

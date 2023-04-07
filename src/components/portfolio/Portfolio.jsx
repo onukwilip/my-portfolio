@@ -145,11 +145,11 @@ const Project = (/**@type portfolioArray[0] */ { eachProject, index }) => {
   const control = useAnimation();
   const variants = {
     initialLeft: {
-      x: 500,
+      x: 150,
       opacity: 0.5,
     },
     initialRight: {
-      x: -500,
+      x: -150,
       opacity: 0.5,
     },
     animate: {
@@ -226,7 +226,7 @@ const OtherProjects = (
 
   const variants = {
     initial: {
-      x: -300,
+      x: -150,
       opacity: 0.5,
     },
     animate: {

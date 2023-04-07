@@ -24,13 +24,14 @@ em {
 }
 
 button {
-  padding: 10px 25px;
-  font-size: 14px;
-  border-radius: 25px;
-  border: none;
-  background: linear-gradient(to top left, rgba(6, 2, 255, 0.9), rgba(0, 0, 225, 0.3));
+  border: 5px solid white;
   color: white;
+  background: transparent;
+  border-radius: 10px;
+  padding: 7px 15px;
+  font-size: 18px;
 }
 button:hover {
-  background-image: linear-gradient(to top left, rgba(255, 2, 2, 0.5), rgba(0, 0, 225, 0.5));
+  background: white;
+  color: #670067;
 }/*# sourceMappingURL=App.css.map */

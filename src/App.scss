@@ -23,14 +23,14 @@ em {
   }
 }
 button {
-  padding: 10px 25px;
-  font-size: 14px;
-  border-radius: 25px;
-  border: none;
-  background: $primary-color;
+  border: 5px solid white;
   color: white;
-  // box-shadow: 2px 3px 20px rgba(0, 0, 225, 0.5);
+  background: transparent;
+  border-radius: 10px;
+  padding: 7px 15px;
+  font-size: 18px;
   &:hover {
-    background-image: linear-gradient(to top left, rgba(255, 2, 2, 0.5), rgba(0, 0, 225, 0.5));
+    background: white;
+    color: $pry-color;
   }
 }

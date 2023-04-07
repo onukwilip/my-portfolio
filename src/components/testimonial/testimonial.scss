@@ -24,7 +24,6 @@
       background-color: white;
       border-radius: 20px;
       width: 200px;
-      // position: absolute;
       img {
         width: 100px;
         height: 100px;
@@ -48,6 +47,10 @@
       padding: 1rem;
       text-align: left;
     }
+  }
+  .each-slide {
+    width: 100%;
+    @include flex2(center, center, 0, row);
   }
 }
 

@@ -1,0 +1,114 @@
+.skills {
+  padding: 30px 80px;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: top;
+  flex-direction: column-reverse;
+  margin-bottom: 5rem;
+}
+.skills > div {
+  width: 100%;
+}
+.skills .sk-intro {
+  display: flex;
+  gap: 0.1rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.skills .sk-intro h1 {
+  color: #670067;
+  font-weight: bold;
+}
+.skills .sk-l-side {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.skills .sk-l-side .skills-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
+}
+@media (max-width: 601px) {
+  .skills .sk-l-side .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.skills .sk-l-side .all-skills {
+  width: 100%;
+  display: flex;
+  gap: 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.skills .sk-l-side .all-skills p {
+  font-size: 30px;
+  color: #670067;
+  font-weight: bold;
+}
+.skills .sk-r-side {
+  display: flex;
+  gap: 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+@media (max-width: 551px) {
+  .skills {
+    padding: 30px 1rem;
+  }
+}
+
+.each-skill {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: top;
+  flex-direction: column;
+  transition: 0.5s;
+  padding: 10px;
+  cursor: pointer;
+}
+.each-skill .img-container {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+}
+.each-skill .img-container img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  border-radius: 50%;
+}
+.each-skill .img-container em {
+  font-size: 20px;
+  font-weight: bold;
+  color: #670067;
+  text-align: center;
+}
+.each-skill em {
+  display: none;
+}
+.each-skill:hover {
+  transform: scale(1.1);
+}
+.each-skill:hover .img-container img {
+  border-radius: 0;
+}
+.each-skill:hover em {
+  display: block;
+}/*# sourceMappingURL=skills.css.map */

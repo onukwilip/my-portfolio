@@ -51,11 +51,12 @@ const Header = () => {
             <li onClick={onLinkClick}>
               <a href="#Home">Home</a>
             </li>
-
             <li onClick={onLinkClick}>
               <a href="#About">About</a>
+            </li>{" "}
+            <li onClick={onLinkClick}>
+              <a href="#Skills">Skills</a>
             </li>
-
             <li onClick={onLinkClick}>
               <a href="#Work">Experience</a>
             </li>

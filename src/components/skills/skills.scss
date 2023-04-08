@@ -1,0 +1,77 @@
+@import "../../variables";
+
+.skills {
+    padding: $padding2;
+    @include flex2(center, top, 0.5rem, column-reverse);
+    margin-bottom: 5rem;
+    & > div {
+        width: 100%;
+    }
+    .sk-intro {
+        @include flex2(center, center, 0.1rem, column);
+        h1 {
+            color: $pry-color;
+            font-weight: bold;
+        }
+    }
+    .sk-l-side {
+        @include flex2(center, center, 1rem, column);
+        .skills-container {
+            width: 100%;
+            @include grid(repeat(3, 1fr), auto, 2rem, center, center);
+            @include media(max, 601px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        .all-skills {
+            width: 100%;
+            @include flex2(center, center, 0, column);
+            p {
+                font-size: 30px;
+                color: $pry-color;
+                font-weight: bold;
+            }
+        }
+    }
+    .sk-r-side {
+        @include flex2(center, center, 0, row);
+    }
+    @include media(max, 551px) {
+        padding: 30px 1rem;
+    }
+}
+
+.each-skill {
+    @include flex2(center, top, 0.5rem, column);
+    transition: 0.5s;
+    padding: 10px;
+    cursor: pointer;
+    .img-container {
+        @include flex2(center, start, 0.5rem, column);
+        img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 50%;
+        }
+        em {
+            font-size: 20px;
+            font-weight: bold;
+            color: $pry-color;
+            text-align: center;
+        }
+    }
+    em {
+        display: none;
+    }
+    &:hover {
+        transform: scale(1.1);
+        .img-container img {
+            border-radius: 0;
+        }
+        em {
+            display: block;
+        }
+    }
+}

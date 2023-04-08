@@ -63,9 +63,11 @@ const Skills = () => {
           </div>
         )}
         <br />
-        <button onClick={() => setViewMore((prev) => !prev)}>
-          {!viewMore ? "View more" : "View less"}
-        </button>
+        <a href="#Skills">
+          <button onClick={() => setViewMore((prev) => !prev)}>
+            {!viewMore ? "View more" : "View less"}
+          </button>
+        </a>
       </div>
       <div className="sk-r-side">
         <div className="sk-intro">

@@ -61,7 +61,6 @@
     background: rgba(black, 0.1);
     padding: 1rem;
     border-radius: 5px;
-    backdrop-filter: blur(10px);
     @include flex2(flex-end, center, 10px, column);
     width: 500px;
     position: relative;
@@ -173,12 +172,6 @@
     &:nth-of-type(2n) {
       .content-container {
         left: 0;
-      }
-    }
-    &:hover {
-      .img-container img {
-        filter: grayscale(0%);
-        z-index: 5;
       }
     }
   }

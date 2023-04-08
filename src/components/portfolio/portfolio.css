@@ -66,8 +66,6 @@
   background: rgba(0, 0, 0, 0.1);
   padding: 1rem;
   border-radius: 5px;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
   display: flex;
   gap: 10px;
   align-items: flex-end;
@@ -195,10 +193,6 @@
   }
   .project:nth-of-type(2n) .content-container {
     left: 0;
-  }
-  .project:hover .img-container img {
-    filter: grayscale(0%);
-    z-index: 5;
   }
 }
 
